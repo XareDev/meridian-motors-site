@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian Motors — Curated automobiles in Algeria</title>
+  <meta name="description" content="Meridian Motors offers a hand-picked selection of luxury, sport, and utility vehicles across Algeria." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">M</div>
+        <span class="brand-name">Meridian Motors</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary btn-cta">Get in touch</a>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav">
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-visual">
+        <div class="frame frame-3d" id="hero-3d">
+          <canvas id="hero-3d-canvas"></canvas>
+          <div class="hero-3d-hint">Drag to rotate</div>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot"></span>Est. Algiers, Algeria</span>
+          <h1>Automobiles,<br><span class="muted">carefully chosen.</span></h1>
+          <p>We curate a small, considered selection of vehicles — from executive sedans to serious off-roaders — for drivers who value quality over quantity.</p>
+          <div class="hero-cta">
+            <a href="showcase.html" class="btn btn-primary">Browse the collection
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="contact.html" class="btn btn-outline">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value props -->
+    <section class="bar">
+      <div class="container bar-grid">
+        <div class="value">
+          <div class="value-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6L17 18l-5-3.6L7 18l1.9-5.6L4 8.8h6.1L12 3z"/></svg>
+          </div>
+          <h3>Curated selection</h3>
+          <p>Every vehicle in our showroom is inspected, documented, and chosen for its condition and character.</p>
+        </div>
+        <div class="value">
+          <div class="value-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Transparent history</h3>
+          <p>Full mileage records, ownership history, and service reports available for every car.</p>
+        </div>
+        <div class="value">
+          <div class="value-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>After-sale support</h3>
+          <p>Ongoing maintenance guidance and access to trusted service partners in Algiers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <div class="section-eyebrow">Featured</div>
+          <h2 class="section-title">This month's selection</h2>
+        </div>
+        <a href="showcase.html" class="btn btn-outline">See all</a>
+      </div>
+      <div id="featured-cards" class="cards"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand-name">Meridian Motors</div>
+        <div class="footer-tag">Curated automobiles in Algiers, Algeria.</div>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> Meridian Motors. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button class="modal-close" data-close aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="hero-car-3d.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

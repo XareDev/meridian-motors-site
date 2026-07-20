@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Showcase — Meridian Motors</title>
+  <meta name="description" content="Explore the full Meridian Motors collection: sedans, coupés, SUVs, and pickups. Prices in DZD with full specs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">M</div>
+        <span class="brand-name">Meridian Motors</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="showcase.html" class="active">Showcase</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary btn-cta">Get in touch</a>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="showcase.html" class="active">Showcase</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-header">
+      <div class="section-eyebrow">Collection</div>
+      <h1>The showcase.</h1>
+      <p class="prose" style="margin-top:16px;font-size:16px;color:var(--muted-fg);max-width:560px;">
+        Click any card to reveal full specifications — engine, top speed, mileage, tank size, and drivetrain configuration.
+      </p>
+      <div class="filters">
+        <button class="chip active" data-filter="All">All</button>
+        <button class="chip" data-filter="4WD">4WD</button>
+        <button class="chip" data-filter="2WD">2WD</button>
+        <button class="chip" data-filter="AWD">AWD</button>
+      </div>
+    </section>
+
+    <section class="container" style="padding-bottom:96px;">
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand-name">Meridian Motors</div>
+        <div class="footer-tag">Curated automobiles in Algiers, Algeria.</div>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> Meridian Motors. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button class="modal-close" data-close aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>

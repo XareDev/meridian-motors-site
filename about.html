@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Meridian Motors</title>
+  <meta name="description" content="Meridian Motors is an Algiers-based automobile house curating luxury, sport, and utility vehicles across Algeria." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">M</div>
+        <span class="brand-name">Meridian Motors</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary btn-cta">Get in touch</a>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-header">
+      <div class="section-eyebrow">About</div>
+      <h1>A quieter kind of showroom.</h1>
+      <div class="prose">
+        <p>Meridian Motors was founded on a simple idea: the best way to sell a car is to know it well. From our Algiers showroom, we work with a small, deliberately chosen collection — each vehicle inspected, documented, and presented with the honesty its buyer deserves.</p>
+        <p>We serve individuals, families, and businesses across Algeria. Whether you are looking for a first daily driver or your next long-distance companion, we take the time to match you with the right car — not the next one on the lot.</p>
+      </div>
+    </section>
+
+    <section class="bar">
+      <div class="container stats">
+        <div>
+          <div class="stat-kpi">12+</div>
+          <div class="stat-label">Years in the trade</div>
+        </div>
+        <div>
+          <div class="stat-kpi">600+</div>
+          <div class="stat-label">Vehicles delivered</div>
+        </div>
+        <div>
+          <div class="stat-kpi">4.9</div>
+          <div class="stat-label">Average client rating</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">What we stand for.</h2>
+      <div class="principles">
+        <div class="principle">
+          <h3>Honesty first</h3>
+          <p>Real photos, real specs, real history. No hidden mileage, no rewritten stories.</p>
+        </div>
+        <div class="principle">
+          <h3>Fewer, better cars</h3>
+          <p>A tight collection means we know each vehicle inside out — and can tell you exactly what to expect.</p>
+        </div>
+        <div class="principle">
+          <h3>Long-term relationships</h3>
+          <p>Our clients come back. We stay available after the sale, for service, questions, and the next chapter.</p>
+        </div>
+        <div class="principle">
+          <h3>Local expertise</h3>
+          <p>Rooted in Algeria, we understand local roads, regulations, and what drivers here actually need.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand-name">Meridian Motors</div>
+        <div class="footer-tag">Curated automobiles in Algiers, Algeria.</div>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> Meridian Motors. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>
