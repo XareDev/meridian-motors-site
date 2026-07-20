@@ -335,11 +335,13 @@
 
       mount.classList.remove("is-loading");
       mount.classList.add("is-ready");
+      window.dispatchEvent(new Event("meridian:hero3d-ready"));
     })
     .catch((err) => {
       console.error("Hero 3D scene failed to load:", err);
       mount.classList.remove("is-loading");
       mount.classList.add("is-error");
+      window.dispatchEvent(new Event("meridian:hero3d-ready"));
     });
 
   function resize() {

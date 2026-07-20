@@ -12,6 +12,11 @@
 </head>
 <body>
 
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-mark">M</div>
+  </div>
+
   <!-- ============ Header ============ -->
   <header class="site-header">
     <div class="container header-inner">
@@ -20,23 +25,12 @@
         <span class="brand-name">Meridian Motors</span>
       </a>
       <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="showcase.html">Showcase</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span class="label">Home</span></a>
+        <a href="showcase.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span class="label">Showcase</span></a>
+        <a href="about.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span class="label">About</span></a>
+        <a href="contact.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="label">Contact</span></a>
       </nav>
       <a href="contact.html" class="btn btn-primary btn-cta">Get in touch</a>
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="mobile-nav">
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="showcase.html">Showcase</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
     </div>
   </header>
 
@@ -46,20 +40,20 @@
       <div class="hero-visual">
         <div class="frame frame-3d" id="hero-3d">
           <canvas id="hero-3d-canvas"></canvas>
-          <div class="hero-3d-hint">Drag to rotate</div>
         </div>
       </div>
-      <div class="hero-overlay"></div>
       <div class="hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow"><span class="dot"></span>Est. Algiers, Algeria</span>
-          <h1>Automobiles,<br><span class="muted">carefully chosen.</span></h1>
-          <p>We curate a small, considered selection of vehicles — from executive sedans to serious off-roaders — for drivers who value quality over quantity.</p>
-          <div class="hero-cta">
-            <a href="showcase.html" class="btn btn-primary">Browse the collection
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-            <a href="contact.html" class="btn btn-outline">Contact us</a>
+          <div class="hero-glass">
+            <span class="eyebrow"><span class="dot"></span>Est. Algiers, Algeria</span>
+            <h1>Automobiles,<br><span class="muted">carefully chosen.</span></h1>
+            <p>We curate a small, considered selection of vehicles — from executive sedans to serious off-roaders — for drivers who value quality over quantity.</p>
+            <div class="hero-cta">
+              <a href="showcase.html" class="btn btn-primary">Browse the collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="contact.html" class="btn btn-outline">Contact us</a>
+            </div>
           </div>
         </div>
       </div>

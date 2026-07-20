@@ -24,7 +24,7 @@ const CARS = [
   },
   {
     id: "atlas-rx", name: "Atlas RX", tagline: "Utility Pickup",
-    image: "https://images.unsplash.com/photo-1595758228888-70199ea24d5d?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1657258170961-7e50a7730b70?w=1200&q=80",
     priceDZD: 7150000, year: 2024,
     description: "Built for work and weekends. The Atlas RX pairs heavy-duty capability with a refined cabin, all-terrain tires, and a bed ready for anything.",
     specs: { engine: "3.5L V6 Diesel", maxSpeed: "195 km/h", mileage: "18,600 km", tankSize: "95 L", drivetrain: "4WD", transmission: "10-speed automatic", seats: 5, fuel: "Diesel" }
@@ -216,8 +216,36 @@ function initContactForm() {
   });
 }
 
+// ============ Preloader ============
+function initPreloader() {
+  const pre = document.getElementById("preloader");
+  if (!pre) return;
+  document.body.classList.add("preloading");
+
+  const hero3d = document.getElementById("hero-3d");
+  let pageLoaded = false;
+  let hero3dReady = !hero3d; // pages without the 3D hero don't need to wait for it
+
+  function tryHide() {
+    if (!pageLoaded || !hero3dReady) return;
+    pre.classList.add("loaded");
+    document.body.classList.remove("preloading");
+    setTimeout(() => pre.remove(), 500);
+  }
+
+  window.addEventListener("load", () => { pageLoaded = true; tryHide(); });
+
+  if (hero3d) {
+    window.addEventListener("meridian:hero3d-ready", () => { hero3dReady = true; tryHide(); }, { once: true });
+    // Safety net: if the 3D model errors out silently or the CDN stalls,
+    // don't leave the preloader on screen forever.
+    setTimeout(() => { hero3dReady = true; tryHide(); }, 10000);
+  }
+}
+
 // ============ Init ============
 document.addEventListener("DOMContentLoaded", () => {
+  initPreloader();
   initMobileNav();
   initModal();
 
